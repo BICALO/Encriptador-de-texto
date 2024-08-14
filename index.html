@@ -8,15 +8,17 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container__izquierdo">
         
         <div class="texto__interactivo">
     
-            <textarea name="text" id="text" placeholder="Ingresa el texto aqui"></textarea>
+            <textarea name="text" class="texto" cols=40 rows=10 placeholder="Ingresa el texto aquí"></textarea>
 
         </div>
 
         <div class="texto__inferior">
+
+            <span class="zondicons--exclamation-solid"></span>
             <p>Solo letras minúsculas y sin acentos</p>
 
         </div>
@@ -38,7 +40,7 @@
 
             <h2 id="titulo__mensaje">Ningun mensaje encontrado</h2>
             <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <textarea name="msj" id="msj" class="msj"></textarea>
+            <textarea class="texto__desencriptar" id="msj" class="msj" cols="30" rows="10"></textarea>
 
         </div>
     </div>
