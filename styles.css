@@ -114,6 +114,7 @@
     left: 12%;
     top: 85%;
     gap: 20px;
+    
   }
 
   .button__encriptar{
@@ -131,7 +132,7 @@
     line-height: 19px;
     text-align: center;
     color: aliceblue;
-
+    cursor: pointer;
   }
 
   .button__desencriptar{
@@ -152,7 +153,7 @@
     text-align: center;
     color: aliceblue;
     font-weight: 400;
-
+    cursor: pointer;
   }
 
   .button__encriptar:hover{
@@ -160,14 +161,14 @@
     margin: 0,3%;
     width: 26%;
     padding: 2.2%;
-    background-color: #555e3d;
+    background-color: #a699ca;
   }
   .button__desencriptar:hover{
 
     margin: 0,3%;
     width: 26%;
     padding: 2.2%;
-    background-color: #555e3d;
+    background-color: #e1eaeb;
   }
 
   .imagen__derecha{
@@ -181,7 +182,7 @@
     top: 5%;
     background: #fff;
     border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.008);
+    box-shadow: 2px 3px 5px 2px rgba(128, 128,128, 0.6);
   }
 
   .mensaje__encriptado{
@@ -227,16 +228,18 @@
 }
 
   .texto__desencriptar{
-
+   
+   position: relative;
+   top:80px;
    border:none;
    font-family: "Inter", sans-serif;
    font-style: normal;
    font-size: 15px;
-   font-weight: 700;
-   line-height: 80%;
+   font-weight: 400;
    text-align: justify;
    color: #343a40;
-   line-height: 100%;
+   line-height: 150%;
+   height: 80px;
   }
 
   .imagen__derecha img {
@@ -249,7 +252,7 @@
 
   /* Responsive */
 
-  @media (max-witdth: 57.5em ) {
+  @media (max-width: 53em) {
 
     .container__izquierdo{
         display: flex;
@@ -258,23 +261,23 @@
 
     .texto__interactivo{
 
-       width: 100%; 
-
-    }
-
-    .texto {
+        width: 100%; 
+ 
+     }
+    
+     .texto {
 
         width: 80%;
-        height: 80%;
+        height: 60%;
         left: 10%;
         top: 5%;
     }
-    
+
     .texto__inferior {
 
         width: 80%;
         left: 10%;
-        top: 67%;
+        top: 62%;
 
     }
 
@@ -299,11 +302,30 @@
     .button__desencriptar:hover {
         margin: 0,3%;
         width: 47.5;
-        padding: 20%;
+        padding: 1.8%;
 
     }
-    
+
+    .imagen__derecha {
+
+        width: 80%;
+        height: 26%;
+        left: 10%;
+        top: 80%;
+
+    }
+
+    .mensaje__encriptado{
+         
+       width: 100%;
+       top: -25%;
+    }   
 
 
-    
+    .imagen__derecha img{
+
+       top: 0;
+       display: none;
+       visibility: hidden;
+    }
 }
