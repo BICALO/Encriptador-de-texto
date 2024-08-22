@@ -22,7 +22,7 @@
     font-weight: 400;
     font-size: 24px;
     position: absolute;
-    width: 42%;
+    width: 22%;
     height: 60%;
     left: 12%;
     top:15%;
@@ -113,7 +113,7 @@
     width: 80%;
     left: 12%;
     top: 85%;
-    gap: 20px;
+    gap: 65px;
     
   }
 
@@ -156,6 +156,28 @@
     cursor: pointer;
   }
 
+  .button__copiar{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: 25%;
+    padding: 2%;
+    gap: 8px;
+    background: #d8dfd8;
+    border: 1px solid #0a3871; border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: aliceblue;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+
   .button__encriptar:hover{
 
     margin: 0,3%;
@@ -171,13 +193,20 @@
     background-color: #e1eaeb;
   }
 
+  .button__copiar:hover{
+
+    margin: 0,3%;
+    width: 26%;
+    padding: 2.2%;
+    background-color: #4a2e96;
+  }
   .imagen__derecha{
     
     display: flex;
     justify-content: center;
     position: absolute;
     width: 30%;
-    height: 90%;
+    height: 75%;
     left: 60%;
     top: 5%;
     background: #fff;
@@ -249,6 +278,23 @@
     height: 40%;
     top: 15%;
   }
+
+   .texto__derecho {
+    
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    width: 22%;
+    height: 60%;
+    left: 35%;
+    top:15%;
+    border: none;
+    line-height: 150%;
+   
+   }
+
 
   /* Responsive */
 

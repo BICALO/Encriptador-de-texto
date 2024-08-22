@@ -13,7 +13,7 @@
         <div class="texto__interactivo">
     
             <textarea name="text" class="texto" id= "texto" cols=40 rows=10 placeholder="Ingresa el texto aquí"></textarea>
-
+            <textarea name="text__derecho" class="texto__derecho" id= "texto__derecho" cols=40 rows=20 placeholder=""></textarea>
         </div>
 
         <div class="texto__inferior">
@@ -28,16 +28,16 @@
         
         <button class="button__encriptar" type="button" onclick="encriptar()">Encriptar</button>
         <button class="button__desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
-
+        <button class="button__copiar" type="button" onclick="copiarTexto()">Copiar Texto</button>
     </div>
     
 
     <div class="imagen__derecha">
 
-        <img src="./img/niñoconlupa.png" alt="" id="niñoconlupa">
+        <img src="./img/niñoconlupa.png" alt="" id="niñoConLupa">
 
         <div class="mensaje__encriptado" id="mensaje__encriptado">
-
+           
             <h2 id="titulo__mensaje">Ningun mensaje encontrado</h2>
             <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
            

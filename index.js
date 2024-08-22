@@ -2,7 +2,7 @@ function encriptar() {
 let texto = document.getElementById("texto").value;
 let tituloMensaje = document.getElementById("titulo__mensaje");
 let parrafo = document.getElementById("parrafo");
-let muñeco = document.getElementById("muñeco");
+let niñoconlupa = document.getElementById("niñoConLupa");
 
 let textoCifrado = texto
            .replace(/e/gi, "enter")
@@ -12,7 +12,7 @@ let textoCifrado = texto
            .replace(/u/gi, "ufat")
 
 if (document.getElementById("texto").value.length !=0) {
-    document.getElementById("texto").value = textoCifrado;
+    document.getElementById("texto__derecho").value = textoCifrado;
     tituloMensaje.textContent = "Texto encriptado con exito";
     parrafo.textContent = "";
    niñoconlupa.src = "./img/encriptado.png";
@@ -30,7 +30,7 @@ function desencriptar() {
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo__mensaje");
     let parrafo = document.getElementById("parrafo");
-    let muñeco = document.getElementById("muñeco");
+    let niñoconlupa = document.getElementById("niñoConLupa");
 
     let textoCifrado= texto
            .replace(/enter/gi, "e")
@@ -40,7 +40,7 @@ function desencriptar() {
            .replace(/ufat/gi, "u")
 
 if (document.getElementById("texto").value.length !=0) {
-    document.getElementById("texto").value = textoCifrado;
+    document.getElementById("texto__derecho").value = textoCifrado;
     tituloMensaje.textContent = "Texto desencriptado con exito";
     parrafo.textContent = "";
     niñoconlupa.src = "./img/desencriptado.png";
@@ -53,6 +53,13 @@ if (document.getElementById("texto").value.length !=0) {
     alert("Debes ingresar un texto");
 
 }
+}
 
+function copiarTexto() {
+
+     let textocopiado =  document.getElementById("texto__derecho");
+     let textoacopiar = textocopiado.textContent;
+
+     copiarAlPortapapeles(texto__derecho)
 
 }
