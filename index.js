@@ -24,3 +24,35 @@ if (document.getElementById("texto").value.length !=0) {
 
     alert("Debes ingresar un texto");
 }}
+
+function desencriptar() {
+
+    let texto = document.getElementById("texto").value;
+    let tituloMensaje = document.getElementById("titulo__mensaje");
+    let parrafo = document.getElementById("parrafo");
+    let muñeco = document.getElementById("muñeco");
+
+    let textoCifrado= texto
+           .replace(/enter/gi, "e")
+           .replace(/imes/gi, "i")
+           .replace(/ai/gi, "a")
+           .replace(/ober/gi, "o")
+           .replace(/ufat/gi, "u")
+
+if (document.getElementById("texto").value.length !=0) {
+    document.getElementById("texto").value = textoCifrado;
+    tituloMensaje.textContent = "Texto desencriptado con exito";
+    parrafo.textContent = "";
+    niñoconlupa.src = "./img/desencriptado.png";
+} else {
+
+    niñoconlupa.src = "./img/niñoconlupa.png";
+    tituloMensaje.textContent = "Ningun mensaje fue encontrado";
+    parrafo.textContent = "Ingresa el texto que quieres encriptar o desencriptar";
+
+    alert("Debes ingresar un texto");
+
+}
+
+
+}
