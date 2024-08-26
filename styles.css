@@ -11,7 +11,7 @@
 .container__izquierdo{
 
     position: relative;
-    width: 100vw;
+    flex: 1;
     height: 100vh;
 }
 
@@ -22,13 +22,13 @@
     font-weight: 400;
     font-size: 24px;
     position: absolute;
-    width: 22%;
+    width: 50%;
     height: 60%;
     left: 12%;
     top:15%;
     border: none;
     line-height: 150%;
-    
+    min-width: 250px;
 }
 
 .texto::placeholder{
@@ -45,9 +45,25 @@
     outline: none;
 }
 
+.texto__derecho {
+   
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    left: 20%;
+    top: 65%;
+    border: none;
+    line-height: 150%;
+    min-width: 250px;
+}
+
 .texto__inferior {
 
-    display:flex;
+    display: flex;
     flex-direction: row;
     gap: 8 px;
     position: absolute;
@@ -88,8 +104,6 @@
 
   .texto__inferior p {
 
-
-    
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -107,6 +121,7 @@
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 1% 0;
     position: absolute;
@@ -239,21 +254,20 @@
     line-height: 120%;
     text-align: center;
     color: #343a40;
-
+    
   }
 
 .mensaje__encriptado p {
 
     width: 80%;
-    font-family: ;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     text-align: center;
     color: #495057;
-
-
+    
 }
 
   .texto__desencriptar{
@@ -274,27 +288,27 @@
   .imagen__derecha img {
 
     position: absolute;
-    width: 80%;
+    width: 70%;
     height: 40%;
-    top: 15%;
+    top: 5%;
   }
 
-   .texto__derecho {
-    
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    position: absolute;
-    width: 22%;
-    height: 60%;
-    left: 35%;
-    top:15%;
-    border: none;
-    line-height: 150%;
-   
-   }
+  .h2__mensaje{
 
+    top: 50%;
+
+
+  }
+   .footer {
+
+    background-color: #67adc2;
+    text-align: center;
+    margin-left: 0%;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    top: 97%;
+   }
 
   /* Responsive */
 
@@ -336,10 +350,12 @@
         width: 80%;
         left: 10%;
         top: 70%;
+
     }
 
     .button__encriptar, 
-    .button__desencriptar {
+    .button__desencriptar,
+    .button__copiar {
         width: 48%;
         border-radius: 16px;
     }
@@ -375,3 +391,8 @@
        visibility: hidden;
     }
 }
+
+    .footer{
+
+       
+    }

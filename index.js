@@ -1,9 +1,10 @@
+
 function encriptar() {
 let texto = document.getElementById("texto").value;
 let tituloMensaje = document.getElementById("titulo__mensaje");
-let parrafo = document.getElementById("parrafo");
 let niñoconlupa = document.getElementById("niñoConLupa");
-
+let parrafo = document.getElementById("parrafo");
+let textoDesencriptado= document.getElementById("texto__derecho");
 let textoCifrado = texto
            .replace(/e/gi, "enter")
            .replace(/i/gi, "imes")
@@ -11,11 +12,13 @@ let textoCifrado = texto
            .replace(/o/gi, "ober")
            .replace(/u/gi, "ufat")
 
-if (document.getElementById("texto").value.length !=0) {
+if (texto.length !=0) {
     document.getElementById("texto__derecho").value = textoCifrado;
-    tituloMensaje.textContent = "Texto encriptado con exito";
+    tituloMensaje.textContent = "Texto encriptado";
+    textoDesencriptado.hidden = false
+    niñoconlupa.src = "./img/encriptado.png";
     parrafo.textContent = "";
-   niñoconlupa.src = "./img/encriptado.png";
+
 } else {
 
     niñoconlupa.src = "./img/niñoconlupa.png";
@@ -29,9 +32,8 @@ function desencriptar() {
 
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo__mensaje");
-    let parrafo = document.getElementById("parrafo");
     let niñoconlupa = document.getElementById("niñoConLupa");
-
+    let parrafo = document.getElementById("parrafo");
     let textoCifrado= texto
            .replace(/enter/gi, "e")
            .replace(/imes/gi, "i")
@@ -39,11 +41,11 @@ function desencriptar() {
            .replace(/ober/gi, "o")
            .replace(/ufat/gi, "u")
 
-if (document.getElementById("texto").value.length !=0) {
+if (texto.length !=0) {
     document.getElementById("texto__derecho").value = textoCifrado;
-    tituloMensaje.textContent = "Texto desencriptado con exito";
-    parrafo.textContent = "";
+    tituloMensaje.textContent = "Texto desencriptado";
     niñoconlupa.src = "./img/desencriptado.png";
+    parrafo.textContent = "";
 } else {
 
     niñoconlupa.src = "./img/niñoconlupa.png";
@@ -55,11 +57,22 @@ if (document.getElementById("texto").value.length !=0) {
 }
 }
 
-function copiarTexto() {
+async function copiarTexto() {
 
-     let textocopiado =  document.getElementById("texto__derecho");
-     let textoacopiar = textocopiado.textContent;
+    let textoACopiar = document.getElementById("texto__derecho").value;
+    let tempInput = document.createElement("input");
+    let tituloMensaje = document.getElementById("titulo__mensaje");
+    let niñoconlupa = document.getElementById("niñoConLupa");
 
-     copiarAlPortapapeles(texto__derecho)
+    if (textoACopiar.length !=0){
+        await navigator.clipboard.writeText(textoACopiar);
+        tituloMensaje.textContent = "Texto copiado con exito";
+        niñoconlupa.src = "./img/textocopiar.png";
+        parrafo.textContent = "";
+    } else{
 
+        niñoconlupa.src = "./img/niñoconlupa.png";
+        tituloMensaje.textContent = "Debes ingresar un texto a copiar";
+    }
 }
+ 
