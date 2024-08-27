@@ -43,7 +43,7 @@ function desencriptar() {
 
 if (texto.length !=0) {
     document.getElementById("texto__derecho").value = textoCifrado;
-    tituloMensaje.textContent = "Texto desencriptado";
+    tituloMensaje.textContent = "Desencriptado!!";
     niñoconlupa.src = "./img/desencriptado.png";
     parrafo.textContent = "";
 } else {
@@ -66,7 +66,7 @@ async function copiarTexto() {
 
     if (textoACopiar.length !=0){
         await navigator.clipboard.writeText(textoACopiar);
-        tituloMensaje.textContent = "Texto copiado con exito";
+        tituloMensaje.textContent = "Texto copiado";
         niñoconlupa.src = "./img/textocopiar.png";
         parrafo.textContent = "";
     } else{
